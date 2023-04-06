@@ -12,7 +12,7 @@ local sections = {
   b = { desc = "󰓩 Buffers" },
   d = { desc = " Debugger" },
   g = { desc = " Git" },
-  S = { desc = "󱂬 Session" },
+  s = { desc = "󱂬 Session" },
   t = { desc = " Terminal" },
 }
 if not vim.g.icons_enabled then vim.tbl_map(function(opts) opts.name = opts.name:gsub("^.* ", "") end, sections) end
@@ -162,12 +162,12 @@ end
 
 -- Session Manager
 if is_available "neovim-session-manager" then
-  maps.n["<leader>S"] = sections.S
-  maps.n["<leader>Sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" }
-  maps.n["<leader>Ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" }
-  maps.n["<leader>Sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
-  maps.n["<leader>Sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" }
-  maps.n["<leader>S."] =
+  maps.n["<leader>s"] = sections.s
+  maps.n["<leader>sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" }
+  maps.n["<leader>ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" }
+  maps.n["<leader>sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
+  maps.n["<leader>sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" }
+  maps.n["<leader>s."] =
     { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
 end
 

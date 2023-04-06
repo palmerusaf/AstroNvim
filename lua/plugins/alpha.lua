@@ -25,7 +25,7 @@ return {
       button("LDR f o", "  Recents  "),
       button("LDR f w", "  Find Word  "),
       button("LDR f '", "  Bookmarks  "),
-      button("LDR S l", "  Last Session  "),
+      button("LDR s l", "  Last Session  "),
     }
 
     dashboard.config.layout[1].val = vim.fn.max { 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) }
